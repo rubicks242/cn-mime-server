@@ -187,39 +187,45 @@
                                 <td align="center" style="font-size:0px;padding:10px 25px;padding-bottom:40px;word-break:break-word;">
 
                                     <div style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;font-weight:bold;line-height:1;text-align:center;color:#555;">
-                                        Student Assistance System
-                                        Announcement: SAP Issue Raised
+                                        DNS Resolver by RVCE
                                     </div>
                                 </td>
                             </tr>
                             <tr>
                                 <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                                     <div style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:22px;text-align:left;color:#555;">
-                                        Dear Sir/Ma'am!<br></br>
-                                        <b>${name}</b> with USN: <b>${usn} </b>  Has raised a SAP issue ticket.<br><b>Issue</b>: ${content}</br> please click on the below link to view and resolve.
+                                        Hi User!<br></br>
+                                        Here is the Result about the domain : <b>${domain}</b><br>
+                                                IP Address : <b>${ip}</b><br></br>
+                                                        Version: <b>${version}</b><br></br>
+                                                            City: <b>${city}</b><br></br>
+                                                                Region: <b>${region}</b><br></br>
+                                                                        Country Name: <b>${country_name}</b><br>
+                                                                                Organization: <b>${org}</b><br>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
                                 <td align="center" style="font-size:0px;padding:10px 25px;padding-top:30px;padding-bottom:50px;word-break:break-word;">
-
-                                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;">
-                                        <tr class='clickable-row' data-href=${url}>
-                                            <td align="center" bgcolor="#2F67F6" role="presentation" style="border:none;border-radius:3px;color:#ffffff;cursor:auto;padding:15px 25px;" valign="middle">
-                                                <p style="background:#ffffff;color:#ffffff;font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;font-weight:normal;line-height:120%;Margin:0;text-decoration:none;text-transform:none;">
-                                                    <a href=${url} style="color:#2F67F6">Open</a>
-                                                </p>
-                                            </td>
-                                        </tr>
-                                    </table>
+                                    <a href=${url}>
+                                        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;">
+                                            <tr class='clickable-row' data-href=${url}>
+                                                <td align="center" bgcolor="#2F67F6" role="presentation" style="border:none;border-radius:3px;color:#1f91f8;cursor:auto;padding:15px 25px;" valign="middle">
+                                                    <p style="color:#ffffff;font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;font-weight:normal;line-height:120%;Margin:0;text-decoration:none;text-transform:none;">
+                                                        Go to Website
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </a>
                                 </td>
                             </tr>
                             <tr>
                                 <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
 
                                     <div style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:20px;text-align:left;color:#525252;">
-                                        Note: This is a auto generated Email, Please do not reply<br><br>Student Assistance System<br>RV College of Engineering<br>
-                                        <a href=${web_url} style="color:#2F67F6">${web_url}</a>
+                                        Note: This is a auto generated Email, Please do not reply<br><br>DNS Resolver,<br>RV College of Engineering,<br>
+                                        <a href=${url} style="color:#2F67F6">${url}</a>
                                     </div>
 
                                 </td>

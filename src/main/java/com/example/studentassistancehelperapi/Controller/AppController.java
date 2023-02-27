@@ -17,15 +17,17 @@ public class AppController {
    private MailService mailService;
 
     @PostMapping(value = "/api/mail",consumes = MediaType.APPLICATION_JSON_VALUE,produces = MediaType.APPLICATION_JSON_VALUE)
-    @CrossOrigin(origins = {"http://localhost:8080","https://studentassist.vercel.app/"} )
+    @CrossOrigin(origins = {"http://localhost:8080","https://studentassist.vercel.app/","https://cn-demo-rvce.vercel.app/"} )
     public void sendEmail(@RequestBody Mail request) {
         Map<String, Object> model = new HashMap<>();
-        model.put("name", request.getName());
-        model.put("usn", request.getUsn());
+        model.put("ip", request.getIp());
+        model.put("version", request.getVersion());
         model.put("url", request.getUrl());
-        model.put("type",request.getType());
-        model.put("web_url",request.getWeb_url());
-        model.put("content",request.getContent());
+        model.put("domain",request.getDomain());
+        model.put("city",request.getCity());
+        model.put("region",request.getRegion());
+        model.put("org",request.getOrg());
+        model.put("country_name",request.getCountry_name());
         for(String to : request.getTo()){
            new Thread(new MailThread(mailService,request,model,to)).start();
         }

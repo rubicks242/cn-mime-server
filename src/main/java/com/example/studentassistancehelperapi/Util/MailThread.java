@@ -3,7 +3,6 @@ package com.example.studentassistancehelperapi.Util;
 
 import com.example.studentassistancehelperapi.Model.Mail;
 import com.example.studentassistancehelperapi.Service.MailService;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Map;
 

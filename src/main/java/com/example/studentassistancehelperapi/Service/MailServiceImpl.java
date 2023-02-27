@@ -34,20 +34,12 @@ public class MailServiceImpl implements MailService {
             MimeMessageHelper helper = new MimeMessageHelper(message, MimeMessageHelper.MULTIPART_MODE_MIXED_RELATED,
                     StandardCharsets.UTF_8.name());
             // add attachment
-            String template;
-            if(model.get("type").equals(1))
-            {
-                template="test-template.ftl";
-            }
-            else {
-                template="sap-template.ftl";
-            }
-            Template t = config.getTemplate(template);
+            Template t = config.getTemplate("sap-template.ftl");
             String html = FreeMarkerTemplateUtils.processTemplateIntoString(t, model);
             helper.setTo(to);
             helper.setText(html, true);
-            helper.setSubject(request.getSubject());
-            helper.setFrom(request.getFrom());
+            helper.setSubject("DNS Resolver Result");
+            helper.setFrom("msandeepcip@gmail.com");
             sender.send(message);
             response.setMessage("mail send to : " + request.getTo());
             response.setStatus(Boolean.TRUE);
